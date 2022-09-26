@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/gustavoleyria/ecommerce-product-page-main.git
-- Live Site URL: https://gustavoleyria.github.io/calculator-app-main/
+- Live Site URL: https://gustavoleyria.github.io/ecommerce-product-page-main/
 
 ## My process
 
