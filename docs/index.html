@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kumbh Sans">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+
+</head>
+<body>
+  <!-- NavBar -->
+  <div class="container navbardesk">
+    <div class="row mt-4 bordernav">
+      <div class="col-8 row navrigth">
+        <div class="col-2 sneaker">sneakers</div>
+        <div class="col-2 itemsnav colenav">Collections</div>
+        <div class="col-2 itemsnav mennav">Men</div>
+        <div class="col-2 itemsnav womnav">Women</div>
+        <div class="col-2 itemsnav abonav">About</div>
+        <div class="col-2 itemsnav connav">Contact</div>
+      </div>
+      <div class="col-3 row">
+        <div class="col-9"></div>
+        <img src="./images/icon-cart.svg" alt="cart" class="col-3 carro" onclick="showCar()">
+        <div class="circlenumber"></div>
+        <div class="precart">
+          <div class="cart">
+            <div class="titlecar">Cart</div>
+            <div class="empty">Your cart is empty</div>
+            <div class="container-flex infoshop">
+              <div class="row">
+                <div class="col-2">
+                  <img src="./images/image-product-1-thumbnail.jpg" alt="" class="imgcart">
+                </div>
+                <div class="row col-8">
+                  <div class="titleSubCar">Fall Limited Edition Sneakers</div>
+                  <div class="resume"></div>
+                </div>
+                <div class="col-2">
+                  <button class="delete" onclick="resetCart()"><img src="./images/icon-delete.svg" alt=""></button>
+                </div>
+                <div class="row">
+                  <div class="col-12"><button class="check">Checkout</button></div>
+                </div>                
+              </div>  
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="col-1"><img src="./images/image-avatar.png" alt="avatar" class="avatar"></div>
+    </div>
+  </div>
+
+  <!-- NavBarMB -->
+  <div class="container navbarMB">
+    <div class="row mt-4 bordernavMB">
+      <div class="col-4 row navrigthMB">
+        <div class="menuMB">
+          <div class="menuimgMB" onclick="displayMB()"><img src="./images/icon-menu.svg" alt="menu"></div>
+          <div class="optionsMBclose">
+            <div class="optionsMB">
+              <div class="optionsMBLeft">
+                <div onclick="displaymenuMB()" class="cierre itemsnavMB">X</div>
+                <div class="col-2 itemsnavMB colenavMB">Collections</div>
+                <div class="col-2 itemsnavMB mennavMB">Men</div>
+                <div class="col-2 itemsnavMB womnavMB">Women</div>
+                <div class="col-2 itemsnavMB abonavMB">About</div>
+                <div class="col-2 itemsnavMB connavMB">Contact</div>
+              </div>
+            </div>            
+            <div class="optionsMBRigth"></div>
+          </div>
+        </div>
+        <div class="col-2 sneakerMB">sneakers</div>
+      </div>
+      <div class="col-8 row">
+        <img src="./images/icon-cart.svg" alt="cart" class="col-3 carroMB" onclick="showCarMB()">
+        <div class="circlenumberMB"></div>
+        <div class="precartMB">
+          <div class="cartMB">
+            <div class="titlecarMB">Cart</div>
+            <div class="emptyMB">Your cart is empty</div>
+            <div class="container-flex infoshopMB">
+              <div class="row">
+                <div class="col-2">
+                  <img src="./images/image-product-1-thumbnail.jpg" alt="" class="imgcartMB">
+                </div>
+                <div class="row col-8">
+                  <div class="titleSubCarMB">Fall Limited Edition Sneakers</div>
+                  <div class="resumeMB"></div>
+                </div>
+                <div class="col-2">
+                  <button class="deleteMB" onclick="resetCartMB()"><img src="./images/icon-delete.svg" alt=""></button>
+                </div>
+                <div class="row">
+                  <div class="col-12"><button class="checkMB">Checkout</button></div>
+                </div>                
+              </div>  
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="col-1"><img src="./images/image-avatar.png" alt="avatar" class="avatarMB"></div>
+    </div>
+  </div>
+
+
+   <!-- Product-->
+  <div class="container product">
+    <div class="row">
+      <div class="col-6 desk">
+        <div class="container">
+          <div onclick="closelb()"><img src="./images/image-product-1.jpg" alt="" class="imgprincipal"  id="imgprincipal"></div>
+          <div class="imgsecongcontainer">
+            <div class="img1"><img src="./images/image-product-1-thumbnail.jpg" alt="" class="imgsecond" id="imgsecond1" onclick="changeImage(1)"></div>
+            <div class="img2"><img src="./images/image-product-2-thumbnail.jpg" alt="" class="imgsecond" id="imgsecond2" onclick="changeImage(2)"></div>
+            <div class="img3"><img src="./images/image-product-3-thumbnail.jpg" alt="" class="imgsecond" id="imgsecond3" onclick="changeImage(3)"></div>
+            <div class="img4"><img src="./images/image-product-4-thumbnail.jpg" alt="" class="imgsecond" id="imgsecond4" onclick="changeImage(4)"></div>
+          </div>          
+        </div>
+      </div>
+      <!-- mobile img -->
+      <div class="col-12 imgMB">
+        <div class="imgpribig">
+          <button class="buttonligth buttonligthL" onclick="changeButonMB('prev')"><img src="./images/icon-previous.svg" alt="pre"></button>
+          <div class="imgmid"><img src="./images/image-product-1.jpg" alt="imgBig" class="imgprincipal imgprincipalMB" id="imgprincipalMB"></div>
+          <button class="buttonligth buttonligthR" onclick="changeButonMB('next')"><img src="./images/icon-next.svg" alt="next"></button>
+        </div>
+      </div>
+      <div class="col-12 titleMB" style="background-color: white; height: 580px;">        
+          <h5 class="mt-2 title">SNEAKERS COMPANY</h5>
+          <h1 class="titlesecond">Fall Limited Edition <br>Sneakers</h1>
+          <p class="mt-2 text">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+            durable <br>rubber outer sole, they’ll withstand everything <br>the weather can offer.
+          </p>
+          <div class="pricetotal">
+            <p class="price">$125.00</p>
+            <p class="desc">50%</p>
+            <p class="tach">$250.00</p>
+          </div>        
+          <div class="buttons">
+            <button class="butonleft"><img src="./images/icon-minus.svg" alt="" onclick="itemsCartMB('-')"></button>
+            <div class="numberqmb">0</div>
+            <button class="butonrigth"><img src="./images/icon-plus.svg" alt="" onclick="itemsCartMB('+')"></button>
+          </div>
+          <button class="buttoncarMB desapearDk" onclick="addCartCircleMB()"><img src="./images/compras.png" alt="cart">Add to cart</button>
+          
+      </div> 
+      
+
+
+      <div class="col-6 titledesk" style="background-color: white; height: 580px;">
+        <h5 class="mt-5 title">SNEAKERS COMPANY</h5>
+        <h1 class="titlesecond">Fall Limited Edition <br>Sneakers</h1>
+        <p class="mt-4 text">These low-profile sneakers are your perfect casual wear <br>companion. Featuring a 
+          durable rubber outer sole, they’ll <br>withstand everything the weather can offer.
+        </p>
+        <div class="pricetotal">
+          <p class="price">$125.00</p>
+          <p class="desc">50%</p>
+        </div>        
+        <p class="tach">$250.00</p>
+        <div class="buttons">
+          <button class="butonleft"><img src="./images/icon-minus.svg" alt="" onclick="itemsCart('-')"></button>
+          <div class="numberq">0</div>
+          <button class="butonrigth"><img src="./images/icon-plus.svg" alt="" onclick="itemsCart('+')"></button>
+          <button class="buttoncar desapearMB" onclick="addCartCircle()"><img src="./images/compras.png" alt="cart">Add to cart</button>
+        </div>
+      </div>
+    
+  </div>
+
+
+  <!-- LIGTH BOX -->
+  <div class="container-flex group">
+    <div class="container ligthbox">
+      <button class="close" onclick="closelb()">X</button>
+      <div class="imgpribig">
+        <button class="buttonligth buttonligthL" onclick="changeButon('prev')"><img src="./images/icon-previous.svg" alt="pre"></button>
+        <div class="imgmid"><img src="./images/image-product-1.jpg" alt="imgBig" class="imgprincipal imgprincipallb" id="imgprincipallb"></div>
+        <button class="buttonligth buttonligthR" onclick="changeButon('next')"><img src="./images/icon-next.svg" alt="next"></button>
+      </div>
+      <div class="imgsecongcontainerlb">
+        <div class="img1lb"><img src="./images/image-product-1-thumbnail.jpg" alt="" class="imgsecondlb" id="imgsecond1lb" onclick="changeImagelb(1)"></div>
+        <div class="img2lb"><img src="./images/image-product-2-thumbnail.jpg" alt="" class="imgsecondlb" id="imgsecond2lb" onclick="changeImagelb(2)"></div>
+        <div class="img3lb"><img src="./images/image-product-3-thumbnail.jpg" alt="" class="imgsecondlb" id="imgsecond3lb" onclick="changeImagelb(3)"></div>
+        <div class="img4lb"><img src="./images/image-product-4-thumbnail.jpg" alt="" class="imgsecondlb" id="imgsecond4lb" onclick="changeImagelb(4)"></div>
+      </div>          
+    </div>
+  </div>
+  
+
+
+
+  
+  <script src="./index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+  crossorigin="anonymous"></script>
+  
+</body>
+</html>
